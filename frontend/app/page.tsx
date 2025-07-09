@@ -129,10 +129,10 @@ export default function Portfolio() {
   ]
 
   const socialLinks = [
-    { name: "Resume", icon: FileText, url: "/resume.pdf", color: "text-orange-400" },
-    { name: "GitHub", icon: Github, url: "https://github.com/jeevi", color: "text-white" },
-    { name: "LinkedIn", icon: Linkedin, url: "https://linkedin.com/in/jeevi", color: "text-blue-400" },
-    { name: "Medium", icon: BookOpen, url: "https://medium.com/@jeevi", color: "text-green-400" },
+    { name: "Resume", icon: FileText, url: "/docs/jeevithanM_swe_resume.pdf", color: "text-orange-400" },
+    { name: "GitHub", icon: Github, url: "https://github.com/jeeevii", color: "text-white" },
+    { name: "LinkedIn", icon: Linkedin, url: "https://linkedin.com/in/jeevithan-mahenthran", color: "text-blue-400" },
+    { name: "Medium", icon: BookOpen, url: "https://medium.com/@jeevithanmahenthran", color: "text-green-400" },
   ]
 
   const nextProject = () => {
@@ -191,14 +191,14 @@ export default function Portfolio() {
                 JEEVI
               </span>
               <span className="block text-2xl md:text-3xl lg:text-4xl font-normal text-gray-400 mt-4">
-                👋 FULL STACK ENGINEER
+                👋 FULL STACK SOFTWARE ENGINEER
               </span>
             </h1>
 
+            {/* Subtitle */}
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed font-light">
-              Backend-focused engineer building <span className="text-orange-400 font-semibold">scalable systems</span>{" "}
-              and experimenting with <span className="text-purple-400 font-semibold">AI innovations</span>. Turning
-              complex problems into elegant solutions.
+              Computer Science student at <span className="text-blue-400 font-semibold">UC Santa Cruz</span> who loves building <span className="text-orange-400 font-semibold">scalable systems</span> and exploring <span className="text-purple-400 font-semibold">AI projects</span>. 
+              Always down to learn, solve everyday problems, and look for <span className="text-red-400 font-semibold">j*b opportunities</span>.
             </p>
 
             {/* Main CTA Buttons */}
