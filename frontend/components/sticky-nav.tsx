@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Menu, X, Code, User, Briefcase, FolderOpen, FileText } from "lucide-react"
+import { Menu, X, Code, User, Briefcase, FolderOpen, FileText, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 interface StickyNavProps {
@@ -63,8 +63,8 @@ export function StickyNav({ showNav }: StickyNavProps) {
                   clipPath: "polygon(8px 0%, 100% 0%, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0% 100%, 0% 8px)",
                 }}
               >
-                <FileText className="mr-2 h-4 w-4" />
-                Resume
+                <Mail className="mr-2 h-4 w-4" />
+                Contact
               </Button>
             </div>
 
