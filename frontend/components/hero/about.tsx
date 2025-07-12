@@ -16,25 +16,28 @@ export default function AboutSection() {
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                   <p className="text-gray-300 text-lg leading-relaxed mb-8 font-light">
-                    I'm a passionate full-stack engineer who thrives on building robust backend systems and pushing
-                    the boundaries of AI integration. When I'm not architecting scalable solutions, you'll find me
-                    exploring cutting-edge technologies, dominating in Valorant, or diving deep into system
-                    optimization patterns.
+                    I’m a Computer Science student at UC Santa Cruz, graduating in 2026, who enjoys building projects from scratch, 
+                    with a focus on backend systems and APIs. 
+                    I’m always working on fun side projects that solve problems or just seem cool and impactful.
+                    When I’m not coding, you’ll probably catch me boxing, hooping, lifting, fishing, or gaming with friends.
+                    If you’re curious about my work or just wanna chat, check out AI Jeevi.
                   </p>
                   <div className="space-y-4">
-                    <InfoRow icon={MapPin} text="San Francisco, CA" />
-                    <InfoRow icon={Code} text="5+ years of engineering excellence" />
-                    <InfoRow icon={Smartphone} text="Mobile-first architecture mindset" />
+                    {/* <InfoRow icon={MapPin} text="Oakland, CA" />
+                    <InfoRow icon={Code} text="US Citizen" />
+                    <InfoRow icon={Smartphone} text="Brainrotter" /> */}
                   </div>
                 </div>
                 <div className="space-y-6">
                   <h3 className="text-2xl font-bold text-orange-400 mb-6 tracking-wide">SYSTEM.STATS</h3>
-                  <div className="space-y-4 text-gray-300 font-mono">
-                    <StatItem emoji="🎮" label="valorant_rank" value='"Diamond"' comment="// on good days" />
-                    <StatItem emoji="🤖" label="ai_projects" value="3" comment="// including this chat" />
-                    <StatItem emoji="☕" label="coffee_intake" value='"~4 cups/day"' comment="// optimal performance" />
-                    <StatItem emoji="🌙" label="peak_hours" value='"2:00 AM"' comment="// when magic happens" />
-                  </div>
+                    <div className="space-y-4 text-gray-300 font-mono">
+                      <StatItem emoji="💀" label="league_rank" value='"Diamond II"' comment="// peak was 2 years ago.." />
+                      <StatItem emoji="🎮" label="valorant_rank" value='"Platinum I"' comment="// every blue moon" />
+                      <StatItem emoji="💪" label="bench_pr" value="235lb" comment="// during peak bulk.. its like 200lb now" />
+                      <StatItem emoji="🤖" label="ai_projects" value="7" comment="// including this chat" />
+                      <StatItem emoji="☕" label="monster_intake" value='"~150 cans"' comment="// lifetime achievement (?)" />
+                      <StatItem emoji="📖" label="books_read" value="12" comment="// mostly manga & some tech" />
+                    </div>
                 </div>
               </div>
             </CardContent>

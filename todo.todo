@@ -1,9 +1,11 @@
 Portfolio Tasks:
     Socials & Visuals:
-        [] Import proper icons for social links (GitHub, LinkedIn, Medium)
+        [x] Import proper icons for social links (GitHub, LinkedIn, Medium)
         [] Update “Talk to Me (AI)” button — try different icon, improve highlight effect
-        [] Swap website picture and update logos/meta data
-        [] Improve navbar styling + spacing (desktop & mobile)
+        [x] Swap website picture and update logos/meta data
+        [x] Improve navbar styling + spacing (desktop & mobile)
+        [x] Add favicon (Jeevi logo or something else?)
+        [x] Add small animation to waving hand emoji in hero section 
 
     Chatbot/AI Features:
         [] Refine AI chatbot UI — should cover more of the page, fix mobile layout
@@ -17,16 +19,21 @@ Portfolio Tasks:
         [] Consider reusing previous backend — general-purpose backend on Render with multiple endpoints
 
     Content/Sections:
-        [] Revamp About Me section:
-        - Remove location and highlights
-        - Expand “System Stats” with fun facts
-        - Add a short intro that encourages users to try the AI chat
-        [] Fix Featured Projects section:
-        - Consider reusing old project section (updated theme)
-        - Add links to demos or YouTube videos
+        [x] Update Project section:
+            [x] - Add 2-3 new projects (SecureAI, FitCheck AI, etc.)
+            [x] - Remove old/outdated projects
+            [x] - Add links to demos or YouTube videos
+            [x] - Consider reusing old project section (updated theme)
+        [x] Revamp About Me section:
+            [x] - Remove location and highlights
+            [x] - Expand “System Stats” with fun facts
+            [x] - Add a short intro that encourages users to try the AI chat
+        [x] Fix Featured Projects section:
+            [x] - Consider reusing old project section (updated theme)
+            [x] - Add links to demos or YouTube videos
         [] Update Work Experience content
-        [] Import old tech stack from previous portfolio — match new theme & styling
-        [] Move Skills section to the bottom (last section)
+        [x] Import old tech stack from previous portfolio — match new theme & styling
+        [x] Move Skills section to the bottom (last section)
 
     extra:
         [] Tweak AI chat button and navbar on mobile (spacing, padding)
