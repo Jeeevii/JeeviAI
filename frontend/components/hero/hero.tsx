@@ -61,8 +61,8 @@ export default function HeroSection({ onChatOpen }: { onChatOpen: () => void }) 
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed font-light">
-            Currently a computer science student at <span className="text-blue-400 font-semibold">UC Santa Cruz</span> who enjoys building <span className="text-orange-400 font-semibold">impactful systems</span> and exploring <span className="text-purple-400 font-semibold">AI projects</span>. 
-            Always down to learn, solve everyday problems, and look for <span className="text-red-400 font-semibold">j*b opportunities</span>.
+            Currently a computer science student at <span className="text-blue-400 font-semibold">UC Santa Cruz</span> who enjoys building <span className="text-orange-400 font-semibold">impactful systems</span> and exploring <span className="text-purple-400 font-semibold">AI/ML projects</span>. 
+            Always down to learn, solve problems, and look for <span className="text-red-400 font-semibold">j*b opportunities..</span>
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">

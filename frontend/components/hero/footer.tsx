@@ -5,7 +5,7 @@ export default function FooterSection() {
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-gray-400 mb-4 font-mono">
             <span className="text-orange-400">Built with</span> Next.js + Tailwind CSS +{" "}
-            <span className="text-purple-400">ChatGPT 🐈‍⬛</span>
+            <span className="text-purple-400">Vibes 🐈‍⬛</span>
           </p>
           <p className="text-gray-600 text-sm font-mono">© 2025 Jeevithan Mahenthran</p>
         </div>

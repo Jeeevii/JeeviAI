@@ -57,7 +57,7 @@ const projects = [
     techStack: ["Flux 1.1 Kontext", "Resemble AI Chatterbox","Gemini-1.5-Flash", "Replicate", "Next.js", "TailwindCSS", "Python"],
     githubUrl: "https://github.com/Jeeevii/FitCheck",
     liveUrl: null,
-    image: "/placeholders/placeholder.svg",
+    image: "/placeholders/placeholder.svg?height=200&width=400",
     demoUrl: "https://www.youtube.com/watch?v=Melo3dYctjM",
   },
 ]
