@@ -1,17 +1,17 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { StickyNav } from "@/components/sticky-nav"
-import { AIChatPanel } from "@/components/ai-chat-panel"
+import { StickyNav } from "@/components/helpers/nav"
+import { AIChatPanel } from "@/components/helpers/aichatpanel"
 import { Button } from "@/components/ui/button"
 import { Bot } from "lucide-react"
 
-import HeroSection from "@/components/HeroSection"
-import AboutSection from "@/components/AboutSection"
-import SkillsSection from "@/components/SkillsSection"
-import ProjectsSection from "@/components/ProjectsSection"
-import ExperienceSection from "@/components/ExperienceSection"
-import Footer from "@/components/FooterSection"
+import HeroSection from "@/components/hero/hero"
+import AboutSection from "@/components/hero/about"
+import SkillsSection from "@/components/hero/skills"
+import ProjectsSection from "@/components/hero/project"
+import ExperienceSection from "@/components/hero/exp"
+import Footer from "@/components/hero/footer"
 
 export default function PortfolioPage() {
   const [isChatOpen, setIsChatOpen] = useState(false)
@@ -38,9 +38,9 @@ export default function PortfolioPage() {
 
       <HeroSection onChatOpen={() => setIsChatOpen(true)} />
       <AboutSection />
-      <SkillsSection />
-      <ProjectsSection />
       <ExperienceSection />
+      <ProjectsSection />
+      <SkillsSection />
       <Footer />
 
       <AIChatPanel isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />
