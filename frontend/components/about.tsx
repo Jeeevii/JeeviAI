@@ -1,7 +1,7 @@
 "use client"
 
 import { Card, CardContent } from "@/components/ui/card"
-import { MapPin, Code, Smartphone, Gamepad } from "lucide-react"
+import {Gamepad } from "lucide-react"
 
 export default function AboutSection() {
   return (
