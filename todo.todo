@@ -1,17 +1,20 @@
 Portfolio Tasks:
     Socials & Visuals:
         [x] Import proper icons for social links (GitHub, LinkedIn, Medium)
-        [] Update “Talk to Me (AI)” button — try different icon, improve highlight effect
+        [x] Update “Talk to Me (AI)” button — try different icon, improve highlight effect
         [x] Swap website picture and update logos/meta data
         [x] Improve navbar styling + spacing (desktop & mobile)
         [x] Add favicon (Jeevi logo or something else?)
         [x] Add small animation to waving hand emoji in hero section 
 
     Chatbot/AI Features:
-        [] Refine AI chatbot UI — should cover more of the page, fix mobile layout
+        [x] Refine AI chatbot UI — should cover more of the page, fix mobile layout
         [] Build actual chatbot functionality (basic Q&A to start)
         [] Write a custom AI prompt with my writing style + guardrails for focused answers (only Jeevi-related questions/info)
-        [] Add proxy, stronger prompting, and limits to avoid high AI token usage
+        [] Add proxy, stronger prompting, and rate limits to avoid high API token usage
+        [] serverless guardrails? if not use free tier aporia or something
+        [] Add “clear chat” button to clear convo cache
+        [] type writer/streaming effect for AI responses, and auto scroll to bottom 
 
     Backend/Endpoint:
         [] Implement “Contact Me” functionality (email form, serverless function, etc.)
@@ -31,9 +34,9 @@ Portfolio Tasks:
         [x] Fix Featured Projects section:
             [x] - Consider reusing old project section (updated theme)
             [x] - Add links to demos or YouTube videos
-        [] Update Work Experience content
+        [x] Update Work Experience content
         [x] Import old tech stack from previous portfolio — match new theme & styling
         [x] Move Skills section to the bottom (last section)
 
     extra:
-        [] Tweak AI chat button and navbar on mobile (spacing, padding)
+        [x] Tweak AI chat button and navbar on mobile (spacing, padding)
