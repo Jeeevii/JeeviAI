@@ -2,16 +2,16 @@
 
 import { useState, useEffect } from "react"
 import { StickyNav } from "@/components/helpers/nav"
-import { AIChatPanel } from "@/components/helpers/aichatpanel"
+import { AIChatPanel } from "@/components/helpers/aichat"
 import { Button } from "@/components/ui/button"
 import { Bot } from "lucide-react"
 
-import HeroSection from "@/components/hero/hero"
-import AboutSection from "@/components/hero/about"
-import SkillsSection from "@/components/hero/skills"
-import ProjectsSection from "@/components/hero/project"
-import ExperienceSection from "@/components/hero/exp"
-import Footer from "@/components/hero/footer"
+import HeroSection from "@/components/hero"
+import AboutSection from "@/components/about"
+import SkillsSection from "@/components/skills"
+import ProjectsSection from "@/components/project"
+import ExperienceSection from "@/components/exp"
+import Footer from "@/components/footer"
 
 export default function PortfolioPage() {
   const [isChatOpen, setIsChatOpen] = useState(false)

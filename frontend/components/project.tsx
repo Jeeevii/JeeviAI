@@ -17,16 +17,16 @@ import { Button } from "@/components/ui/button"
 const projects = [
     {
     title: "SlugRush",
-    description: "A full stack web app for UCSC students to track gym crowd levels.",
+    description: "A full stack web app for UCSC students to track gym crowd levels and plan worouts.",
     techStack: ["Next.js", "Vercel", "Python", "Render", "Supabase", "PostgreSQL"],
     githubUrl: "https://github.com/Jeeevii/SlugRush",
     liveUrl: "https://slugrush.vercel.app",
-    image: "/placeholders/placeholder.svg?height=200&width=400",
+    image: "/projects/slugrush.png",
     demoUrl: null,
   },
   {
     title: "Body & Soul",
-    description: "A 2v2 online MOBA developed in Unity 6, where players are bound by a tether, with only the most coordinated team will achieve victory. ",
+    description: "A 2v2 online MOBA developed in Unity 6, where players are bound by a tether, with only the most coordinated team achieving victory.",
     techStack: ["Unity", "Photon", "C#"],
     githubUrl: "https://github.com/171-Team-25",
     liveUrl: "https://drive.google.com/file/d/13yVBUx2IcxoUuTJVpGvCxYbKIJIukH2q/view",
@@ -35,7 +35,7 @@ const projects = [
   },
   {
     title: "Falsification of Autonomous Driving Stacks",
-    description: "Research on autonomous vehicle testing in CARLA with WSL, analyzing crash-prone parameters and introducing ChatScene, an LLM-powered Scenic script generator for targeted safety tests.",
+    description: "Research on autonomous vehicle testing in CARLA via WSL, analyzing crash-prone parameters and introducing ChatScene, an LLM-powered Scenic script generator for targeted safety tests.",
     techStack: ["Python", "CARLA", "Scenic", "VerifAI", "ChatScene", "OpenAI 4o-Mini"],
     githubUrl: "https://github.com/Jeeevii/cse233_acc_verifai",
     liveUrl: "docs/cse233_final_report.pdf",
@@ -48,7 +48,7 @@ const projects = [
     techStack: ["GitHub API", "Gemini-2.0-Flash", "Next.js", "TailwindCSS", "Python",],
     githubUrl: "https://github.com/Jeeevii/SecureAI",
     liveUrl: null,
-    image: "/placeholders/placeholder.svg?height=200&width=400",
+    image: "/projects/secureai.png",
     demoUrl: "https://www.youtube.com/watch?v=f1LCjcX3dho&list=PLNPTwR2U9PYKSRE-SxDom7r8oSXwr7cXo",
   },
   {
@@ -57,7 +57,7 @@ const projects = [
     techStack: ["Flux 1.1 Kontext", "Resemble AI Chatterbox","Gemini-1.5-Flash", "Replicate", "Next.js", "TailwindCSS", "Python"],
     githubUrl: "https://github.com/Jeeevii/FitCheck",
     liveUrl: null,
-    image: "/placeholders/placeholder.svg?height=200&width=400",
+    image: "/projects/fitcheck.png",
     demoUrl: "https://www.youtube.com/watch?v=Melo3dYctjM",
   },
 ]

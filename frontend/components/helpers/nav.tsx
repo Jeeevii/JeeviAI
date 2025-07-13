@@ -26,8 +26,8 @@ export function StickyNav({ showNav }: StickyNavProps) {
     }
   }
 
-  const openResume = () => {
-    window.open("/resume.pdf", "_blank")
+  const openEmail = () => {
+    window.open("https://mail.google.com/mail/?view=cm&fs=1&to=jeevithanmahenthran@gmail.com", "_blank")
     setIsMenuOpen(false)
   }
 
@@ -57,7 +57,7 @@ export function StickyNav({ showNav }: StickyNavProps) {
                 </button>
               ))}
               <Button
-                onClick={openResume}
+                onClick={openEmail}
                 className="bg-gradient-to-r from-orange-500 to-purple-500 hover:from-orange-600 hover:to-purple-600 text-white px-6 py-2 font-bold transition-all duration-300 hover:scale-105 border-0"
                 style={{
                   clipPath: "polygon(8px 0%, 100% 0%, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0% 100%, 0% 8px)",
@@ -94,7 +94,7 @@ export function StickyNav({ showNav }: StickyNavProps) {
                   </button>
                 ))}
                 <button
-                  onClick={openResume}
+                  onClick={openEmail}
                   className="flex items-center w-full px-4 py-3 text-orange-400 hover:bg-orange-500/10 transition-all duration-300 font-semibold tracking-wide"
                 >
                   <Mail className="h-5 w-5 mr-3" />

@@ -33,10 +33,10 @@ export default function AboutSection() {
                     <div className="space-y-4 text-gray-300 font-mono">
                       <StatItem emoji="😭" label="league_rank" value='"Diamond II"' comment="// peaked like 2 years ago.." />
                       <StatItem emoji="💀" label="valorant_rank" value='"Platinum I"' comment="// consistent every blue moon" />
-                      <StatItem emoji="💪" label="bench_pr" value="235lb" comment="// during peak bulk.. its like 200lb now" />
+                      <StatItem emoji="💪" label="bench_pr" value="235lb" comment="// during peak bulk.. its like 205lb now" />
+                      <StatItem emoji="☕" label="monster_intake" value='"~150 cans"' comment="// lifetime achievement..?" />
                       <StatItem emoji="🤖" label="ai_projects" value="7" comment="// including this" />
-                      <StatItem emoji="☕" label="monster_intake" value='"~150 cans"' comment="// lifetime achievement (?)" />
-                      <StatItem emoji="📖" label="books_read" value="12" comment="// mostly manga & some tech" />
+                      {/* <StatItem emoji="📖" label="books_read" value="12" comment="// mostly manga & some tech" /> */}
                     </div>
                 </div>
               </div>

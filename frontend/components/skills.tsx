@@ -8,17 +8,17 @@ const skillCategories = [
   {
     title: "Frontend Development",
     icon: PanelTop,
-    skills: ["Next.js", "Angular", "Tailwind CSS", "Figma"],
+    skills: ["React", "Angular", "Figma"],
   },
   {
     title: "Backend Development",
     icon: Server,
-    skills: ["Flask", "FastAPI", "Node.js", "C/C++"],
+    skills: ["FastAPI", "Node.js", "C/C++"],
   },
   {
     title: "Databases & Cloud",
     icon: Database,
-    skills: ["PostgreSQL", "Firebase", "Supabase", "Vercel", "Docker"],
+    skills: ["PostgreSQL", "Firebase", "Supabase", "Docker"],
   },
   {
     title: "AI & ML Development",
@@ -33,7 +33,7 @@ const skillCategories = [
   {
     title: "Dev & Security Tools",
     icon: Terminal,
-    skills: ["Git", "Linux", "Ghidra", "WireShark", "Mininet", "Bash"],
+    skills: ["Git", "Linux", "Bash", "Ghidra", "WireShark"],
   },
 ]
 
