@@ -4,8 +4,8 @@ import React from 'react'
 
 import { Analytics } from '@vercel/analytics/next';
 export const metadata: Metadata = {
-  title: 'Jeevithan Mahenthran | UCSC CS & Game Design Portfolio',
-  description: 'hi! I\'m Jeevithan Mahenthran, a CS student at UC Santa Cruz. This is my personal portfolio where i share my projects ive built, companies and skills ive learned, and a bit about me!',
+  title: 'Jeevithan Mahenthran | UCSC Computer Science Portfolio',
+  description: 'Hello! I\'m Jeevi, a CS & Game Dev student at the University of Santa Cruz. This is my personal portfolio where i share my projects ive built, companies and skills ive learned, and a bit about me.',
   keywords: [
     'Jeevithan Mahenthran',
     'Jeevi',
@@ -37,15 +37,13 @@ export const metadata: Metadata = {
   creator:
     'Jeevithan Mahenthran',
   openGraph: {
-    title: 'Jeevithan Mahenthran | UC Santa Cruz CS Portfolio',
-    description: 'hi! I\'m Jeevithan Mahenthran, a CS student at UC Santa Cruz. This is my personal portfolio where i share the projects ive built, companies and skills ive learned, and a bit about me!',
+    title: 'Jeevithan Mahenthran | UC Santa Cruz Computer Science Portfolio',
+    description: 'hi! I\'m Jeevithan Mahenthran, a CS & Game Dev student at UC Santa Cruz. This is my personal portfolio where i share the projects ive built, companies and skills ive learned, and a bit about me!',
     url: 'https://jeevithanmahenthran.com',
     siteName: 'Jeevithan Mahenthran Portfolio',
     images: [
       {
-        url: 'https://jeevithanmahenthran.com/icons/jeevi.jpg',
-        width: 1200,
-        height: 630,
+        url: 'https://jeevithanmahenthran.com/icons/favicon/favicon.ico',
         alt: 'Jeevithan Mahenthran Portfolio',
       },
     ],
