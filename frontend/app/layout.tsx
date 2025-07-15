@@ -37,13 +37,13 @@ export const metadata: Metadata = {
   creator:
     'Jeevithan Mahenthran',
   openGraph: {
-    title: 'Jeevithan Mahenthran | UCSC CS & Game Design Portfolio',
+    title: 'Jeevithan Mahenthran | UC Santa Cruz CS Portfolio',
     description: 'hi! I\'m Jeevithan Mahenthran, a CS student at UC Santa Cruz. This is my personal portfolio where i share the projects ive built, companies and skills ive learned, and a bit about me!',
     url: 'https://jeevithanmahenthran.com',
     siteName: 'Jeevithan Mahenthran Portfolio',
     images: [
       {
-        url: 'https://jeevithanmahenthran.com/jeevi.jpg',
+        url: 'https://jeevithanmahenthran.com/icons/jeevi.jpg',
         width: 1200,
         height: 630,
         alt: 'Jeevithan Mahenthran Portfolio',
