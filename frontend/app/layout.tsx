@@ -4,8 +4,8 @@ import React from 'react'
 
 import { Analytics } from '@vercel/analytics/next';
 export const metadata: Metadata = {
-  title: 'Jeevithan Mahenthran | UCSC Computer Science Portfolio',
-  description: 'Hello! I\'m Jeevi, a CS & Game Dev student at the University of Santa Cruz. This is my personal portfolio where i share my projects ive built, companies and skills ive learned, and a bit about me.',
+  title: 'Jeevithan Mahenthran | UC Santa Cruz Computer Science Portfolio',
+  description: 'hi! I\'m Jeevithan Mahenthran, a CS & Game Dev student at UC Santa Cruz. This is my personal portfolio where i share the projects ive built, companies and skills ive learned, and a bit about me.',
   keywords: [
     'Jeevithan Mahenthran',
     'Jeevi',
