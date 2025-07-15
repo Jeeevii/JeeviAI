@@ -29,7 +29,6 @@ A personal website that does two things:
 ## 🔗 Links
 
 - 🔴 **Live Site**: [jeevithanmahenthran.com](https://jeevithanmahenthran.com)  
-- 🧠 **Source Code**: [GitHub Repo](https://github.com/Jeeevii/Jeevi)
 
 ---
 
@@ -50,9 +49,3 @@ A personal website that does two things:
 - [Streamline Icons](https://www.streamlinehq.com/icons/)
 
 ---
-
-## 📥 Want to Contribute?
-
-Feel free to fork, clone, or steal ideas. Pull requests welcome.  
-Or just say hey.
-
