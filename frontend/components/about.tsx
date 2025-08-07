@@ -23,7 +23,7 @@ export default function AboutSection() {
                     If you’re curious about my work or just wanna chat, check out AI Jeevi 😉
                   </p>
                   <div className="space-y-4">
-                    <InfoRow icon={Gamepad} text="Riot Games PLEASE HIRE ME" />
+                    {/* <InfoRow icon={Gamepad} text="Riot Games " /> */}
                     {/* <InfoRow icon={Code} text="US Citizen" />
                     <InfoRow icon={Smartphone} text="Brainrotter" /> */}
                   </div>
