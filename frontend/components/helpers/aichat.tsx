@@ -150,8 +150,8 @@ export function AIChatPanel({ isOpen, onClose }: AIChatPanelProps) {
               {/* Jeevi AI Logo */}
               <div className="w-12 h-12 rounded-full border-2 border-white overflow-hidden bg-black/20">                  
                   <img
-                    src="/icons/jeevi.jpg"
-                    alt="Jeevi Logo"
+                    src="/icons/tony.png"
+                    alt="Tony Cat"
                     className="w-full h-full object-cover"
                   />
               </div>
