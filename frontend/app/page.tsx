@@ -8,7 +8,8 @@ import { Bot } from "lucide-react"
 
 import HeroSection from "@/components/hero"
 import AboutSection from "@/components/about"
-import SkillsSection from "@/components/skills"
+// import SkillsSection from "@/components/skills"
+import RollingTechStack from "@/components/rolling_tech_stack"
 import ProjectsSection from "@/components/project"
 import ExperienceSection from "@/components/exp"
 import Footer from "@/components/footer"
@@ -39,8 +40,9 @@ export default function PortfolioPage() {
       <HeroSection onChatOpen={() => setIsChatOpen(true)} />
       <AboutSection />
       <ExperienceSection />
+      <RollingTechStack />
       <ProjectsSection />
-      <SkillsSection />
+      {/* <SkillsSection /> */}
       <Footer />
 
       <AIChatPanel isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />
