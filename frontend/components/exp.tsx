@@ -4,6 +4,14 @@ import { ExperienceCard } from "@/components/helpers/expcard"
 
 const experiences = [
   {
+    title: "Software Support Engineer",
+    company: "Bright Data",
+    period: "Sep. 2025 - Present",
+    description: "Provide technical support to global enterprise clients by troubleshooting API integrations and data pipelines, collaborating with engineering teams to resolve bugs, and building internal automation tools that reduced issue resolution time by 30%.",
+    technologies: ["Python", "Node.js", 'Linux', "MongoDB", "DevOps"],
+    icon: "/icons/brightdata.jpg", 
+  },
+  {
     title: "Full Stack Software Developer",
     company: "UCSC jLabs ENTs Research",
     period: "Mar. 2025 - Aug. 2025",
