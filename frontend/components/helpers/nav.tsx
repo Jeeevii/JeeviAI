@@ -14,8 +14,8 @@ export function StickyNav({ showNav }: StickyNavProps) {
   const navItems = [
     { name: "About", href: "#about", icon: User },
     { name: "Experience", href: "#experience", icon: Briefcase },
-    { name: "Projects", href: "#projects", icon: FolderOpen },
     { name: "Skills", href: "#skills", icon: Code },
+    { name: "Projects", href: "#projects", icon: FolderOpen },
   ]
 
   const scrollToSection = (href: string) => {
