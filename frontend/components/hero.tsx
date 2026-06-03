@@ -8,7 +8,7 @@ import Image from 'next/image';
 import { Code, BotMessageSquare, FileText } from "lucide-react"
 
 const socialLinks = [
-  { name: "Resume", icon: FileText, type: "react", url: "/docs/jeevithan_mahenthran_resume.pdf", color: "text-orange-400" },
+  { name: "Resume", icon: FileText, type: "react", url: "/docs/Jeevithan_Mahenthran_Software_Engineer_Resume.pdf", color: "text-orange-400" },
   { name: "GitHub", icon: Github, url: "https://github.com/jeeevii"},
   { name: "LinkedIn", icon: Linkedin, url: "https://linkedin.com/in/jeevithan-mahenthran" },
   { name: "Medium", icon: Medium, url: "https://medium.com/@jeevithanmahenthran"},
@@ -70,10 +70,6 @@ export default function HeroSection({ onChatOpen }: { onChatOpen: () => void }) 
               size="lg"
               onClick={scrollToProjects}
               className="bg-gray-800 border-2 border-gray-600 text-gray-300 hover:bg-gray-700 hover:border-gray-500 hover:text-white px-10 py-4 text-lg font-semibold transition-all duration-300 hover:scale-105"
-              style={{
-                clipPath:
-                  "polygon(10px 0%, 100% 0%, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0% 100%, 0% 10px)",
-              }}
             >
               <Code className="mr-2" />
               VIEW MY WORK
