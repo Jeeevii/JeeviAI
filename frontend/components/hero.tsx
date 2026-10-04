@@ -1,118 +1,52 @@
-"use client"
+import Image from "next/image"
+import { Code, FileText } from "lucide-react"
+import { profile } from "@/lib/portfolio"
+import { ChatWidget } from "./helpers/chat-widget"
 
-import { Button } from "@/components/ui/button"
-import Github from "@/public/icons/github.png"
-import Linkedin from "@/public/icons/linkedin.png"
-import Medium from "@/public/icons/medium.png"
-import Image from 'next/image';
-import { Code, BotMessageSquare, FileText } from "lucide-react"
-
-const socialLinks = [
-  { name: "Resume", icon: FileText, type: "react", url: "/docs/Jeevithan_Mahenthran_Software_Engineer_Resume.pdf", color: "text-orange-400" },
-  { name: "GitHub", icon: Github, url: "https://github.com/jeeevii"},
-  { name: "LinkedIn", icon: Linkedin, url: "https://linkedin.com/in/jeevithan-mahenthran" },
-  { name: "Medium", icon: Medium, url: "https://medium.com/@jeevithanmahenthran"},
-]
-
-export default function HeroSection({ onChatOpen }: { onChatOpen: () => void }) {
-  const scrollToProjects = () => {
-    const el = document.querySelector("#projects")
-    el?.scrollIntoView({ behavior: "smooth" })
-  }
-
+export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Grid */}
-      <div className="absolute inset-0 opacity-10">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `
-            linear-gradient(rgba(255, 111, 0, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255, 111, 0, 0.1) 1px, transparent 1px)
-          `,
-            backgroundSize: "50px 50px",
-          }}
-        />
-      </div>
+    <section aria-labelledby="intro-title" className="relative isolate overflow-hidden border-b border-gray-800/70">
+      <div aria-hidden="true" className="hero-glow pointer-events-none absolute -left-16 top-20 h-64 w-64 rounded-full bg-orange-500/20 blur-3xl sm:left-16" />
+      <div aria-hidden="true" className="hero-glow hero-glow-secondary pointer-events-none absolute -right-24 bottom-12 h-72 w-72 rounded-full bg-gradient-to-r from-orange-500/15 to-purple-500/15 blur-3xl sm:right-12 sm:h-96 sm:w-96" />
 
-      {/* Glowing Orbs */}
-      <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-r from-orange-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-orange-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
-      
-      {/* Intro Page */}
-      <div className="relative container mx-auto px-4 py-20 text-center">
-        <div className="max-w-5xl mx-auto animate-fade-up">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tight">
-            <span className="block text-white">HEY, I'M</span>
-            <span className="block bg-gradient-to-r from-orange-400 via-orange-500 to-purple-400 bg-clip-text text-transparent animate-gradient">
-              JEEVI
-            </span>
-            <span className="block text-2xl md:text-3xl lg:text-4xl font-normal text-gray-400 mt-4">
-            <span
-              className="inline-block origin-[70%_70%] animate-wave hover:animate-waveHover"
-              aria-label="waving hand"
-              role="img"
-            >
-              👋 
-            </span> 
-             {" "} FULL STACK SOFTWARE ENGINEER
-            </span>
+      <div className="relative container mx-auto flex min-h-svh items-center justify-center px-5 py-14 text-center sm:py-20">
+        <div className="mx-auto w-full max-w-5xl">
+          <h1 id="intro-title" className="text-5xl font-black leading-[1.02] tracking-tight sm:text-7xl lg:text-8xl">
+            <span className="block">
+              HEY, I’M
+            </span>{" "}
+            <span className="block bg-gradient-to-r from-orange-400 to-purple-400 bg-clip-text text-transparent">JEEVI</span>
           </h1>
-
-          <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed font-light">
-            Currently a computer science student at <span className="text-blue-400 font-semibold">UC Santa Cruz</span> who enjoys building <span className="text-orange-400 font-semibold">impactful systems</span> and exploring <span className="text-purple-400 font-semibold">AI/ML projects</span>. 
-            Always down to learn, solve problems, and look for <span className="text-red-400 font-semibold">j*b opportunities..</span>
+          <p className="mt-5 text-base font-normal text-gray-400 sm:text-2xl lg:text-3xl">
+            <span role="img" aria-label="Waving hand" className="mr-2 inline-block origin-[70%_70%] animate-wave text-2xl hover:animate-waveHover sm:text-3xl">👋</span>
+            FULL STACK SOFTWARE ENGINEER
           </p>
-
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
-            <Button
-              size="lg"
-              onClick={scrollToProjects}
-              className="bg-gray-800 border-2 border-gray-600 text-gray-300 hover:bg-gray-700 hover:border-gray-500 hover:text-white px-10 py-4 text-lg font-semibold transition-all duration-300 hover:scale-105"
-            >
-              <Code className="mr-2" />
-              VIEW MY WORK
-            </Button>
-            <Button
-              size="lg"
-              onClick={onChatOpen}
-              className="bg-gradient-to-r from-orange-500 to-purple-500 hover:from-orange-600 hover:to-purple-600 text-white px-12 py-4 text-lg font-bold transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-orange-500/25 border-0"
-              style={{
-                clipPath:
-                  "polygon(10px 0%, 100% 0%, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0% 100%, 0% 10px)",
-              }}
-            >
-              <BotMessageSquare className="mr-2" />
-              TALK TO ME (AI)
-            </Button>
+          <p className="mt-6 text-base font-medium text-gray-300 sm:text-lg lg:text-xl">
+            {profile.role} at <span className="text-orange-400">{profile.company}</span>
+          </p>
+          <p className="mx-auto mt-5 max-w-4xl text-base font-light leading-relaxed text-gray-300 sm:text-xl lg:text-2xl">
+            I work on backend systems and APIs, debug production issues, and build things outside of work. 
+            I like solving messy technical problems and turning ideas into software people can actually use.
+          </p>
+          <p className="mt-4 text-sm leading-relaxed text-gray-400 sm:text-base lg:text-lg">
+            M.S. in CSE at {profile.university} · Expected {profile.education.mastersExpected}
+          </p>
+          <div className="mx-auto mt-10 flex max-w-2xl flex-col justify-center gap-4 sm:flex-row sm:gap-6">
+            <a href="#projects" className="hero-action hero-action-work">
+              <Code size={20} aria-hidden="true" />VIEW MY WORK
+            </a>
+            <ChatWidget />
           </div>
-          <div className="flex justify-center gap-6 animate-fade-in">
-            {socialLinks.map((link, index) => (
-              <a
-                key={index}
-                href={link.url}
-                className="hover:scale-110 transition-transform duration-300 group w-16 h-16 flex items-center justify-center"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {link.type === "react" ? (
-                  <link.icon
-                    className={`w-14 h-14 group-hover:scale-110 transition-transform duration-300 ${link.color || 'text-white'}`}
-                  />
-                ) : (
-                  <Image
-                    src={link.icon}
-                    alt={link.name}
-                    className="group-hover:scale-110 transition-transform duration-300 object-contain"
-                    width={56}
-                    height={56}
-                  />
-                )}
+          <div className="mt-9 flex justify-center gap-3 sm:mt-10 sm:gap-6">
+            <a href={profile.resumeUrl} target="_blank" rel="noopener noreferrer" className="social-icon-link" aria-label="Resume (PDF, opens in a new tab)">
+              <FileText className="h-10 w-10 text-orange-400 sm:h-12 sm:w-12" aria-hidden="true" />
+            </a>
+            {profile.socials.map(link => (
+              <a key={link.name} href={link.url} target="_blank" rel="noopener noreferrer" className="social-icon-link" aria-label={link.name + " (opens in a new tab)"}>
+                <Image src={link.image} alt="" width={48} height={48} className="h-10 w-10 object-contain sm:h-12 sm:w-12" />
               </a>
             ))}
           </div>
-
         </div>
       </div>
     </section>

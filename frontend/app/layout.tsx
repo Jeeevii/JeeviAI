@@ -1,72 +1,30 @@
-import type { Metadata } from 'next'
-import './globals.css'
-import React from 'react'
+import type { Metadata, Viewport } from "next"
+import type { ReactNode } from "react"
+import { Analytics } from "@vercel/analytics/next"
+import { profile } from "@/lib/portfolio"
+import "./globals.css"
 
-import { Analytics } from '@vercel/analytics/next';
+const title = `${profile.name} | Software Engineer`
 export const metadata: Metadata = {
-  title: 'Jeevithan Mahenthran | UC Santa Cruz Computer Science Portfolio',
-  description: 'hi! I\'m Jeevithan Mahenthran, a CS & Game Dev student at UC Santa Cruz. This is my personal portfolio where i share the projects ive built, companies and skills ive learned, and a bit about me.',
-  keywords: [
-    'Jeevithan Mahenthran',
-    'Jeevi',
-    'Portfolio',
-    'UCSC',
-    'University of California Santa Cruz',
-    'Computer Science',
-    'Game Design',
-    'Web Development',
-    'Backend Developer',
-    'Full Stack Developer',
-    'Software Engineering Intern',
-    'Student Developer', 
-    'AI Developer',
-    'Projects',
-    'Resume',
-    'GitHub',
-    'LinkedIn',
-    'AI Projects',
-    'Personal Website',
-    'Tech Blog',
-    'Programming',
-    'Software Engineer',
-    'Developer Portfolio'
-  ],
-  authors: [
-    { name: 'Jeevithan Mahenthran', url: 'https://jeevithanmahenthran.com' }
-  ],
-  creator:
-    'Jeevithan Mahenthran',
-  openGraph: {
-    title: 'Jeevithan Mahenthran | UC Santa Cruz Computer Science Portfolio',
-    description: 'hi! I\'m Jeevithan Mahenthran, a CS & Game Dev student at UC Santa Cruz. This is my personal portfolio where i share the projects ive built, companies and skills ive learned, and a bit about me!',
-    url: 'https://jeevithanmahenthran.com',
-    siteName: 'Jeevithan Mahenthran Portfolio',
-    images: [
-      {
-        url: 'https://jeevithanmahenthran.com/icons/favicon/favicon.ico',
-        alt: 'Jeevithan Mahenthran Portfolio',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
+  metadataBase: new URL(profile.siteUrl),
+  title,
+  description: profile.description,
+  authors: [{ name: profile.name, url: profile.siteUrl }],
+  creator: profile.name,
+  alternates: { canonical: "/" },
+  icons: {
+    icon: [{ url: "/icons/favicon/favicon.ico", sizes: "any" }],
+    apple: "/icons/favicon/apple-icon.png",
   },
-  metadataBase: new URL('https://jeevithanmahenthran.com'),
+  openGraph: {
+    title, description: profile.description, url: profile.siteUrl,
+    siteName: `${profile.name} Portfolio`, locale: "en_US", type: "website",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: `${profile.name} - Software Engineer` }],
+  },
+  twitter: { card: "summary_large_image", title, description: profile.description, images: ["/opengraph-image"] },
 }
+export const viewport: Viewport = { themeColor: "#101010" }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
-  return (
-    <html lang="en" className='scroll-smooth'>
-      <head>
-        <link rel="icon" href="/icons/favicon/favicon.ico" sizes="any" />
-      </head>
-      <body>
-        {children}
-        <Analytics />
-      </body>
-    </html>
-  )
+export default function RootLayout({ children }: { children: ReactNode }) {
+  return <html lang="en" className="dark"><body>{children}<Analytics /></body></html>
 }
