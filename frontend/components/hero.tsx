@@ -22,11 +22,11 @@ export default function HeroSection() {
             FULL STACK SOFTWARE ENGINEER
           </p>
           <p className="mt-6 text-base font-medium text-gray-300 sm:text-lg lg:text-xl">
-            {profile.role} at <span className="text-orange-400">{profile.company}</span>
+            {profile.role} at <a href="https://brightdata.com/" target="_blank" rel="noopener noreferrer" className="text-blue-400">{profile.company}</a>
           </p>
           <p className="mx-auto mt-5 max-w-4xl text-base font-light leading-relaxed text-gray-300 sm:text-xl lg:text-2xl">
-            I work on backend systems and APIs, debug production issues, and build things outside of work. 
-            I like solving messy technical problems and turning ideas into software people can actually use.
+            I work on backend systems, debug production issues, and build things outside of work. 
+            I like solving messy problems and turning ideas into software people can actually use.
           </p>
           <p className="mt-4 text-sm leading-relaxed text-gray-400 sm:text-base lg:text-lg">
             M.S. in CSE at {profile.university} · Expected {profile.education.mastersExpected}

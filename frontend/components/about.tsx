@@ -8,20 +8,20 @@ export default function AboutSection() {
         <div className="grid gap-9 lg:grid-cols-[1.1fr_1fr] lg:gap-12">
           <div className="min-w-0 space-y-4 text-base leading-relaxed text-gray-300">
             <p>
-              I’m a software engineer and {profile.role} at {profile.company}.
-              Most of my work is around backend systems, APIs, and figuring out why something broke in production.
+              I’m a {profile.role} at {profile.company}.
+              Most of my work is optimzing data pipelines, APIs, and figuring out why something broke in production.
             </p>
             <p>
-              I like building things from scratch and seeing people actually use them.
+              On the side, I enjoy building things from scratch and seeing people actually use them.
               That includes a gym tracker for UCSC students, backend tools, and a multiplayer game built with Unity and C#.
             </p>
             <p>
-              {personal.hobbies} I also played collegiate League for UCSC’s White team.
+              {personal.hobbies} I also played collegiate League of Legends for UCSC’s team.
             </p>
           </div>
           <div className="min-w-0">
             <h3 className="font-mono text-xl font-bold tracking-wide text-orange-400">SYSTEM.STATS</h3>
-            <p className="mb-5 mt-2 text-xs leading-relaxed text-gray-400">Personal bests and older stats. Keeping these here for the memories.</p>
+            <p className="mb-5 mt-2 text-xs leading-relaxed text-gray-400">Personal bests. Keeping these here for the memories.</p>
             <dl className="space-y-4 font-mono text-sm">
               {personalStats.map(stat => (
                 <div key={stat.id} className="relative border-l-2 border-orange-500 pl-10">

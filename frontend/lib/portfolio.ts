@@ -14,7 +14,7 @@ export const profile = {
   siteUrl: "https://jeevithanmahenthran.com",
   email: "jeevithanmahenth@gmail.com",
   resumeUrl: "/docs/Jeevithan_Mahenthran_Resume%5BFALL%202026%5D.pdf",
-  description: "Software engineer and Technical Solutions Engineer at Bright Data. Building backend systems, API integrations, full-stack products, and multiplayer games.",
+  description: "Currently a Technical Solutions Engineer at Bright Data. I love building backend systems, API integrations, full-stack products, and multiplayer games.",
   socials: [
     { name: "GitHub", url: "https://github.com/jeeevii", image: "/icons/github.png" },
     { name: "LinkedIn", url: "https://linkedin.com/in/jeevithan-mahenthran", image: "/icons/linkedin.png" },
@@ -182,7 +182,7 @@ export const personal = {
   league: "I started playing League in middle school, peaked at Diamond II, and played collegiate League for UCSC’s White team. ADC was my main role.",
   valorant: "My old profile had me at Platinum I in Valorant. Usually on Chamber, Sova, or Cypher, mostly playing with friends.",
   background: "I was born in Sri Lanka, lived in Thailand for a while, and moved to the US in the 2010s. Making my family proud and building things people use keep me motivated.",
-  hobbies: "When I’m not coding, you’ll probably catch me boxing, hooping, lifting, fishing, or gaming with friends.",
+  hobbies: "When I’m not coding, you’ll probably catch me catching fish, on the court, or playing games with friends.",
 } as const
 
 // Original profile values, preserved as historical stats rather than current claims.
