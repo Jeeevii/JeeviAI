@@ -1,123 +1,28 @@
-import { Github, ExternalLink, Video, BookText } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Github, ExternalLink, Video } from "lucide-react"
 import Image from "next/image"
+import type { Project } from "@/lib/portfolio"
 
-interface ProjectCardProps {
-  title: string
-  description: string
-  techStack: string[]
-  githubUrl: string
-  liveUrl: string | null
-  demoUrl: string | null
-  image: string
-}
-
-export function ProjectCard({
-  title,
-  description,
-  techStack,
-  githubUrl,
-  liveUrl,
-  demoUrl,
-  image,
-}: ProjectCardProps) {
+export function ProjectCard({ id, title, category, description, highlights, techStack, githubUrl, liveUrl, liveLabel, demoUrl, image, imageAlt, featured = false }: Project & { featured?: boolean }) {
   return (
-    <Card className="bg-gray-900/50 border border-gray-800 hover:border-orange-500/50 transition-all duration-300 hover:scale-105 backdrop-blur-sm overflow-hidden group">
-      <div className="relative h-48 overflow-hidden">
-        <Image
-          src={image || "/placeholder.svg"}
-          alt={title}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-110"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent" />
-        {/* <div className="absolute top-4 right-4">
-          <div
-            className="w-8 h-8 bg-gradient-to-r from-orange-500 to-purple-500 flex items-center justify-center"
-            style={{
-              clipPath: "polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%)",
-            }}
-          >
-            <Video className="h-4 w-4 text-white" />
-          </div>
-        </div> */}
+    <article aria-labelledby={id + "-title"} className="project-card flex h-full flex-col overflow-hidden rounded-xl bg-[#171719] ring-1 ring-white/10 transition-colors hover:ring-orange-400/40 focus-within:ring-orange-400/40">
+      <div className="relative aspect-[16/9] overflow-hidden bg-gray-950">
+        <Image src={image} alt={imageAlt} fill sizes={featured ? "(min-width: 1152px) 355px, (min-width: 1024px) 31vw, (min-width: 768px) 47vw, 94vw" : "(min-width: 1152px) 540px, (min-width: 768px) 47vw, 94vw"} className="object-cover" />
       </div>
-      <CardHeader>
-        <CardTitle className="text-xl text-orange-400 font-bold tracking-wide">{title}</CardTitle>
-        <CardDescription className="text-gray-300 leading-relaxed font-light">{description}</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <div className="flex flex-wrap gap-2 mb-6">
-          {techStack.map((tech, index) => (
-            <Badge
-              key={index}
-              variant="secondary"
-              className="bg-gray-800 text-purple-300 border border-gray-700 hover:border-purple-500/50 transition-colors font-mono text-xs"
-            >
-              {tech}
-            </Badge>
-          ))}
+      <div className="flex flex-1 flex-col p-5 sm:p-6">
+        <p className="text-xs font-medium tracking-wide text-purple-300">{category}</p>
+        <h3 id={id + "-title"} className="mt-2 text-xl font-bold leading-snug text-orange-300">{title}</h3>
+        <p className="mt-3 text-sm leading-6 text-gray-300">{description}</p>
+        <ul aria-label="Technologies" className="mb-4 mt-4 flex flex-wrap gap-x-3 gap-y-1 font-mono text-xs leading-6 text-purple-200">{techStack.map(tech => <li key={tech}>{tech}</li>)}</ul>
+        {highlights.length > 0 && <details className="mb-4">
+          <summary className="cursor-pointer py-3 text-sm font-medium text-gray-300 hover:text-orange-300">Engineering details<span className="sr-only"> for {title}</span></summary>
+          <div><ul className="list-disc space-y-2 pb-2 pl-4 text-sm leading-6 text-gray-300 marker:text-orange-400">{highlights.map(item => <li key={item}>{item}</li>)}</ul></div>
+        </details>}
+        <div className="project-actions mt-auto flex gap-2 border-t border-white/10 pt-4">
+          {demoUrl && <a href={demoUrl} target="_blank" rel="noopener noreferrer" className="project-link" aria-label={title + " - watch demo (opens in a new tab)"}><Video size={16} aria-hidden="true" />Demo</a>}
+          {liveUrl && <a href={liveUrl} target="_blank" rel="noopener noreferrer" className="project-link project-link-primary" aria-label={title + " - " + liveLabel + " (opens in a new tab)"}><ExternalLink size={16} aria-hidden="true" />{liveLabel === "Game build" ? "Build" : liveLabel === "Read report" ? "Report" : "Visit site"}</a>}
+          {githubUrl && <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="project-link" aria-label={title + " - source code (opens in a new tab)"}><Github size={16} aria-hidden="true" />Code</a>}
         </div>
-        <div className="flex gap-3 flex-wrap">
-          <a
-            href={githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1"
-          >
-            <Button
-              size="sm"
-              className="bg-transparent border border-gray-700 text-gray-300 hover:bg-gray-800 hover:border-orange-500/50 w-full font-semibold"
-              style={{
-                clipPath: "polygon(8px 0%, 100% 0%, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0% 100%, 0% 8px)",
-              }}
-            >
-              <Github className="h-4 w-4 mr-2" />
-              CODE
-            </Button>
-          </a>
-            {demoUrl && (
-            <a
-              href={demoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1"
-            >
-              <Button
-                size="sm"
-                className="bg-transparent border border-gray-700 text-gray-300 hover:bg-gray-800 hover:border-orange-500/50 w-full font-semibold"
-                style={{
-                  clipPath: "polygon(8px 0%, 100% 0%, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0% 100%, 0% 8px)",
-                }}
-              >
-                <Video className="h-4 w-4 mr-2" />
-                DEMO
-              </Button>
-            </a>
-          )}
-          {liveUrl && (
-            <a
-              href={liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1"
-            >
-              <Button
-                size="sm"
-                className="bg-gradient-to-r from-orange-500 to-purple-500 hover:from-orange-600 hover:to-purple-600 w-full font-semibold"
-                style={{
-                  clipPath: "polygon(8px 0%, 100% 0%, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0% 100%, 0% 8px)",
-                }}
-              >
-                {liveUrl.endsWith(".pdf") ? <BookText className="h-4 w-4 mr-2" /> : <ExternalLink className="h-4 w-4 mr-2" />}
-                {liveUrl.endsWith(".pdf") ? "READ" : "LIVE"}
-              </Button>
-            </a>
-          )}
-        </div>
-      </CardContent>
-    </Card>
+      </div>
+    </article>
   )
 }

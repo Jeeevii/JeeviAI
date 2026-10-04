@@ -1,66 +1,21 @@
-import { Calendar } from "lucide-react"
-import { Badge } from "@/components/ui/badge"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-
 import Image from "next/image"
+import type { Experience } from "@/lib/portfolio"
 
-interface ExperienceCardProps {
-  title: string
-  company: string
-  period: string
-  description: string
-  technologies: string[]
-  icon: string
-}
-
-export function ExperienceCard({ title, company, period, description, technologies, icon }: ExperienceCardProps) {
+export function ExperienceCard({ title, company, period, description, technologies, icon }: Experience) {
   return (
-    <Card className="bg-gray-900/50 border border-gray-800 hover:border-orange-500/50 transition-all duration-300 backdrop-blur-sm group flex gap-6 p-6">
-      {/* Big icon on the left */}
-      <div className="flex-shrink-0">
-        <Image
-          src={icon}
-          alt={`${company} logo`}
-          width={64}
-          height={64}
-          className="rounded-md object-contain"
-        />
-      </div>
-
-      {/* Content */}
-      <div className="flex-1">
-        <CardHeader className="p-0 mb-4">
-          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
-            <div className="flex-1">
-              <CardTitle className="text-2xl text-orange-400 font-bold tracking-wide mb-2">{title}</CardTitle>
-              <CardDescription className="text-lg text-white font-semibold mb-2">{company}</CardDescription>
-            </div>
-            <div
-              className="flex items-center text-gray-400 bg-gray-800/50 px-4 py-2 border border-gray-700 group-hover:border-purple-500/50 transition-colors"
-              style={{
-                clipPath: "polygon(10px 0%, 100% 0%, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0% 100%, 0% 10px)",
-              }}
-            >
-              <Calendar className="h-4 w-4 mr-2" />
-              <span className="text-sm font-mono">{period}</span>
-            </div>
+    <article className="flex flex-col gap-4 rounded-lg border border-gray-800 bg-gray-900/40 p-5 sm:flex-row sm:gap-5 md:p-6">
+      <Image src={icon} alt="" width={48} height={48} sizes="48px" className="h-12 w-12 shrink-0 rounded-md object-contain" />
+      <div className="min-w-0 flex-1">
+        <div className="flex flex-col justify-between gap-2 md:flex-row md:gap-5">
+          <div>
+            <h3 className="text-lg font-semibold text-orange-300 sm:text-xl">{title}</h3>
+            <p className="mt-1 text-sm font-medium text-white">{company}</p>
           </div>
-        </CardHeader>
-        <CardContent className="p-0">
-          <p className="text-gray-300 leading-relaxed mb-6 font-light">{description}</p>
-          <div className="flex flex-wrap gap-2">
-            {technologies.map((tech, index) => (
-              <Badge
-                key={index}
-                variant="secondary"
-                className="bg-gray-800 text-purple-300 border border-gray-700 hover:border-purple-500/50 transition-colors font-mono text-xs"
-              >
-                {tech}
-              </Badge>
-            ))}
-          </div>
-        </CardContent>
+          <p className="shrink-0 text-sm text-gray-400">{period}</p>
+        </div>
+        <p className="mt-4 max-w-4xl text-sm leading-7 text-gray-300">{description}</p>
+        <ul aria-label="Technologies" className="mt-4 flex flex-wrap gap-2">{technologies.map(tech => <li key={tech} className="tech-tag">{tech}</li>)}</ul>
       </div>
-    </Card>
+    </article>
   )
 }
