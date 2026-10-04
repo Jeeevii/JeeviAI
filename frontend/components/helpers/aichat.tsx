@@ -46,7 +46,7 @@ export default function AIChatPanel({ isOpen, onClose }: { isOpen: boolean; onCl
         <div className="flex shrink-0 items-center gap-3 border-b border-gray-800 px-4 py-4">
           <Image src="/icons/tony.png" alt="" width={40} height={40} className="h-10 w-10 rounded-full object-cover" />
           <div className="min-w-0 flex-1">
-            <h2 id="chat-title" className="font-bold text-orange-300">JEEVI AI</h2>
+            <h2 id="chat-title" className="font-bold text-orange-300">JEEVI.M</h2>
             <p id="chat-description" className="text-xs text-gray-300">Portfolio guide · Preset answers</p>
           </div>
           <button type="button" onClick={onClose} aria-label="Close portfolio guide" className="flex h-11 w-11 items-center justify-center rounded-md hover:bg-gray-800"><X size={20} aria-hidden="true" /></button>

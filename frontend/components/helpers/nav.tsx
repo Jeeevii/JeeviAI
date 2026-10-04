@@ -35,7 +35,7 @@ export function StickyNav() {
         }
       }}>
         <div className="flex h-16 items-center justify-between">
-          <a href="#main" onClick={() => setIsMenuOpen(false)} aria-label="Jeevi - back to top" className="text-xl font-black tracking-tight"><span className="text-orange-400">JEEVI</span>.AI</a>
+          <a href="#main" onClick={() => setIsMenuOpen(false)} aria-label="Jeevi - back to top" className="text-xl font-black tracking-tight"><span className="text-orange-400">JEEVI</span>.M</a>
           <div className="hidden items-center gap-6 md:flex">
             {navItems.map(item => <a key={item.href} href={item.href} className="nav-link">{item.name}</a>)}
             <a href={gmailComposeUrl} target="_blank" rel="noopener noreferrer" className="nav-contact" aria-label="Contact Jeevi in Gmail (opens in a new tab)"><Mail size={16} aria-hidden="true" />Contact</a>
